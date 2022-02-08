@@ -1,5 +1,5 @@
 <template>
-  
+  <div>credits</div>
 </template>
 
 <script>
