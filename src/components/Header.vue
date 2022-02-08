@@ -34,6 +34,7 @@ export default {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 li{
@@ -50,7 +51,7 @@ ul{
 a{
     color: black;
     text-decoration: none;
-    padding: 50px 0;
+    padding: 35px 0;
     font-weight: 900;
     font-size: 14px;
 }
