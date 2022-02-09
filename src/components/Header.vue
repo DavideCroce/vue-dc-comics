@@ -76,30 +76,29 @@ export default {
     z-index: 1;
 }
 
-li{
-    list-style-type: none;
-    padding: 0 20px;
-}
 
 ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    li{
+        list-style-type: none;
+        padding: 0 20px;
+        a{
+            color: black;
+            text-decoration: none;
+            padding: 35px 0;
+            font-weight: 900;
+            font-size: 14px;
+            &:hover{
+                color: dodgerblue;
+                border-bottom: solid dodgerblue 5px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
-a{
-    color: black;
-    text-decoration: none;
-    padding: 35px 0;
-    font-weight: 900;
-    font-size: 14px;
-}
-
-a:hover{
-    color: dodgerblue;
-    border-bottom: solid dodgerblue 5px;
-    cursor: pointer;
-}
 img{
     height: 70px;
 }

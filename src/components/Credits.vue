@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .contain{
     width: 100%;
     background-color: rgb(51, 51, 51);

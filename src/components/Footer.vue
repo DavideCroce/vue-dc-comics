@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 ul{
     list-style-type: none;
     padding: 0;
@@ -65,6 +65,9 @@ ul{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+    div{
+        padding: 0 15px;
+    }
 }
 .contain{
     width: 100%;
@@ -75,10 +78,17 @@ ul{
     display: flex;
     align-items: center;
     height: 350px;
+    .links{
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+        div{
+            padding: 0 15px;
+        }
+    }
 }
-.links div{
-    padding: 0 15px;
-}
+
 h3{
     color: white;
     padding: 5px 0;

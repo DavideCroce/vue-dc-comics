@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #main{
     width: 100%;
     z-index: 1;
@@ -32,24 +32,13 @@ export default {
 #contents{
     background-color: rgb(19, 19, 19);
     width: 100%;
-}
-
-.contain{
-    max-width: 1200px;
-    margin: 0 auto;
-    vertical-align: center;
-    padding: 20px 0;
-    color: white;
-}
-
-.other-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: dodgerblue;
-    width: 1200px;
-    color: white;
-    margin: 0 auto;
+    .contain{
+        max-width: 1200px;
+        margin: 0 auto;
+        vertical-align: center;
+        padding: 20px 0;
+        color: white;
+    }
 }
 
 .links{
@@ -57,11 +46,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.links img{
-    height: 45px;
-    padding: 0 10px;
+    img{
+        height: 45px;
+        padding: 0 10px;
+    }
 }
 
 .smaller img{
@@ -75,5 +63,15 @@ export default {
     justify-content: center;
     align-items: center;
     height: 150px;
+
+    .other-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: dodgerblue;
+        width: 1200px;
+        color: white;
+        margin: 0 auto;
+    }
 }
 </style>
