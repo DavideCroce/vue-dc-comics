@@ -5,16 +5,7 @@
       </figure>
       <nav>
           <ul>
-              <li><a href="#">CHACRACTERS</a></li>
-              <li><a href="#">COMICS</a></li>
-              <li><a href="#">MOVIES</a></li>
-              <li><a href="#">TV</a></li>
-              <li><a href="#">GAMES</a></li>
-              <li><a href="#">COLLECTIBLES</a></li>
-              <li><a href="#">VIDEOS</a></li>
-              <li><a href="#">FANS</a></li>
-              <li><a href="#">NEWS</a></li>
-              <li><a href="#">SHOP</a></li>
+              <li  v-for="link in links" :key="link"><a :href="`${link.url}`">{{link.text}}</a></li>
           </ul>
       </nav>
   </div>
@@ -23,10 +14,58 @@
 <script>
 export default {
  name: 'Header',
+ data(){
+    return{
+    links:
+    [
+        {
+            text:'CHARACTERS',
+            url: '#',
+        },
+        {
+            text:'COMICS',
+            url: '#',
+        },
+        {
+            text:'MOVIES',
+            url: '#',
+        },
+        {
+            text:'TV',
+            url: '#',
+        },
+        {
+            text:'GAMES',
+            url: '#',
+        },
+        {
+            text:'COLLECTIBLES',
+            url: '#',
+        },
+        {
+            text:'VIDEOS',
+            url: '#',
+        },
+        {
+            text:'FANS',
+            url: '#',
+        },
+        {
+            text:'NEWS',
+            url: '#',
+        },
+        {
+            text:'SHOP',
+            url: '#',
+        },
+    ],
+    };
+    
+ }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #hdr{
     max-width: 1200px;
     height: 100px;
@@ -59,6 +98,7 @@ a{
 a:hover{
     color: dodgerblue;
     border-bottom: solid dodgerblue 5px;
+    cursor: pointer;
 }
 img{
     height: 70px;
