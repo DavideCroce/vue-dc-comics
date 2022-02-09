@@ -25,12 +25,5 @@ export default {
 </script>
 
 <style lang="scss">
-*{
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  font-family: 'PT Sans Narrow', sans-serif;
-}
+@import "./assets/sass/generics.scss";
 </style>
