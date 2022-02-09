@@ -1,26 +1,34 @@
 <template>
 <div id="main">
+    <div class="jumbotron"></div>
+
     <div id="contents">
       <div class="contain">
-          <h1 id="content">- -<i class="fas fa-chevron-right"></i> Content goes here <i class="fas fa-chevron-left"></i>- -</h1>
+          <div class="current-series">
+              <button class="c-series">CURRENT SERIES</button>
+          </div>
+          <Comicslist/>
+          <div class="load-button">
+              <button class="load">LOAD MORE</button>
+          </div>
       </div>
     </div>
     <div id="links-content">
-       <div class="other-links">
-            <div class="links"><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>DIGITAL COMICS</span> </div>
-            <div class="links"><img src="../assets/img/buy-comics-merchandise.png" alt=""><span>DC MERCHANDISE</span> </div>
-            <div class="links"><img src="../assets/img/buy-comics-subscriptions.png" alt=""><span>SUBCRIPTION</span> </div>
-            <div class="links"><img src="../assets/img/buy-comics-shop-locator.png" alt=""><span>COMIC SHOP LOCATOR</span> </div>
-            <div class="links smaller"><img src="../assets/img/buy-dc-power-visa.svg" alt=""><span>DC POWER VISA</span> </div>
-      </div>
+        <LinkContent/>
     </div>
 </div>
   
 </template>
 
 <script>
+import Comicslist from './Comicslist.vue';
+import LinkContent from './LinkContent.vue';
 export default {
    name: 'Main',
+   components:{
+       Comicslist,
+       LinkContent,
+   }
 }
 </script>
 
@@ -38,24 +46,20 @@ export default {
         vertical-align: center;
         padding: 20px 0;
         color: white;
+        .c-series{
+            background-color: dodgerblue;
+            padding: 10px;
+            color: white;
+            width: 200px;
+            border: 0;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            bottom: 2px;
+        }
     }
 }
-
-.links{
-    /* margin: 0 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img{
-        height: 45px;
-        padding: 0 10px;
-    }
-}
-
-.smaller img{
-    height: 30px;
-}
-
 #links-content{
     background-color: dodgerblue;
     width: 100%;
@@ -63,15 +67,32 @@ export default {
     justify-content: center;
     align-items: center;
     height: 150px;
-
-    .other-links{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+}
+.load-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .load{
+        text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;
         background-color: dodgerblue;
-        width: 1200px;
+        padding: 10px 50px;
         color: white;
-        margin: 0 auto;
+        font-weight: bold;
+        border: none;
+        font-size: 15px;
     }
+}
+.jumbotron{
+    background-image: url(../assets/img/main-top-bg.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.current-series{
+    position: relative;
 }
 </style>
